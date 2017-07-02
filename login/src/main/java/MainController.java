@@ -32,7 +32,7 @@ public class MainController {
 		Map<String, Object> map = new HashMap<>();
 		if (!"123456".equals(password)) {
 			map.put("success", false);
-			map.put("message", "密码错误");
+			map.put("message", "wrong password");
 			return map;
 		}
 
@@ -40,7 +40,7 @@ public class MainController {
 		session.setAttribute(WebSecurityConfig.SESSION_KEY, account);
 
 		map.put("success", true);
-		map.put("message", "登录成功");
+		map.put("message", "login success");
 		return map;
 	}
 
